@@ -7,7 +7,9 @@
     "**/.server/**/*.ts",
     "**/.server/**/*.tsx",
     "**/.client/**/*.ts",
-    "**/.client/**/*.tsx"
+    "**/.client/**/*.tsx",
+    "load-context.ts",
+    "./react-router/types/**/*"
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
@@ -15,6 +17,10 @@
       "@react-router/cloudflare",
       "@cloudflare/workers-types",
       "vite/client"
+    ],
+    "rootDirs": [
+      ".",
+      "./.react-router/types"
     ],
     "isolatedModules": true,
     "esModuleInterop": true,
@@ -27,6 +33,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
+    "rootDir": ".",
     "paths": {
       "~/*": ["./app/*"]
     },
